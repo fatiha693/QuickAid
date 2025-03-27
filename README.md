@@ -90,6 +90,6 @@ java Main
 
 ## Contact
 
-Your Name - fatiha@iut-dhaka.edu
+Email - fatiha@iut-dhaka.edu
 
 Project Link: https://github.com/fatiha693/QuickAid.git
