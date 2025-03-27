@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-    private static UserDatabase userDatabase = new UserDatabase();
+    private static UserAuthenticator userDatabase = new UserDatabase();
     private static Scanner scanner = new Scanner(System.in);
-    private static EmergencyService emergencyService = new EmergencyService();
+    private static EmergencyServiceManager emergencyService = new EmergencyServiceManager();
     private static HospitalFinder hospitalFinder = new HospitalFinder();
     private static EmergencyContacts emergencyContacts = new EmergencyContacts();
     private static FirstAidGuidelines firstAidGuidelines = new FirstAidGuidelines();
@@ -23,6 +23,8 @@ public class Main {
             }
         }
     }
+
+
 
     private static void showLoginMenu() {
         System.out.println("\n--- Emergency Support System ---");
@@ -73,6 +75,7 @@ public class Main {
             System.out.println("Invalid username or password.");
         }
     }
+
 
     private static void showMainMenu() {
         System.out.println("\n--- Emergency Support System ---");
