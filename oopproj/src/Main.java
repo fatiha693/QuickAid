@@ -2,9 +2,35 @@ import java.util.HashMap;
 import java.util.Scanner;
 import java.util.Map;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Main {
+
+
+    private static void printBanner() {
+        String pink = "\033[35m";  // ANSI escape code for magenta (pink)
+        String reset = "\033[0m";   // Resets color back to default
+
+        System.out.println(pink + "   _      _      _      _      _      _      _      _      _      _   ");
+        System.out.println(" _( )_  _( )_  _( )_  _( )_  _( )_  _( )_  _( )_  _( )_  _( )_  _( )_ ");
+        System.out.println("(_ o _)(_ o _)(_ o _)(_ o _)(_ o _)(_ o _)(_ o _)(_ o _)(_ o _)(_ o _)");
+        System.out.println(" (_,_)  (_,_)  (_,_)  (_,_)  (_,_)  (_,_)  (_,_)  (_,_)  (_,_)  (_,_) ");
+        System.out.println("   _                                                              _   ");
+        System.out.println(" _( )_  ██████╗ ██╗   ██╗██╗ ██████╗██╗  ██╗ █████╗ ██╗██████╗  _( )_ ");
+        System.out.println("(_ o _)██╔═══██╗██║   ██║██║██╔════╝██║ ██╔╝██╔══██╗██║██╔══██╗(_ o _)");
+        System.out.println(" (_,_) ██║   ██║██║   ██║██║██║     █████╔╝ ███████║██║██║  ██║ (_,_) ");
+        System.out.println("   _   ██║▄▄ ██║██║   ██║██║██║     ██╔═██╗ ██╔══██║██║██║  ██║   _   ");
+        System.out.println(" _( )_ ╚██████╔╝╚██████╔╝██║╚██████╗██║  ██╗██║  ██║██║██████╔╝ _( )_ ");
+        System.out.println("(_ o _) ╚══▀▀═╝  ╚═════╝ ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝╚═════╝ (_ o _)");
+        System.out.println(" (_,_)                                                          (_,_) ");
+        System.out.println("   _      _      _      _      _      _      _      _      _      _   ");
+        System.out.println(" _( )_  _( )_  _( )_  _( )_  _( )_  _( )_  _( )_  _( )_  _( )_  _( )_ ");
+        System.out.println("(_ o _)(_ o _)(_ o _)(_ o _)(_ o _)(_ o _)(_ o _)(_ o _)(_ o _)(_ o _)");
+        System.out.println(" (_,_)  (_,_)  (_,_)  (_,_)  (_,_)  (_,_)  (_,_)  (_,_)  (_,_)  (_,_) " + reset);
+    }
+
+
+
+
     private static UserAuthenticator userDatabase = new UserDatabase();
     private static Scanner scanner = new Scanner(System.in);
     private static EmergencyServiceManager emergencyService = new EmergencyServiceManager();
@@ -15,6 +41,11 @@ public class Main {
     private static User currentUser = null;
 
     public static void main(String[] args) {
+
+
+        printBanner();
+
+
         while (true) {
             if (currentUser == null) {
                 showLoginMenu();
@@ -27,7 +58,7 @@ public class Main {
 
 
     private static void showLoginMenu() {
-        System.out.println("\n--- Emergency Support System ---");
+        System.out.println("\n--- Your Emergency Support System ---");
         System.out.println("1. Register");
         System.out.println("2. Login");
         System.out.println("3. Exit");
