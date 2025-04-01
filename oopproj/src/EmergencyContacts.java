@@ -25,14 +25,5 @@ public class EmergencyContacts {
         }
     }
 
-    public void displayContacts() {
-        if (contacts.isEmpty()) {
-            System.out.println("No emergency contacts found.");
-        } else {
-            System.out.println("Your emergency contacts:");
-            for (int i = 0; i < contacts.size(); i++) {
-                System.out.println((i + 1) + ". " + contacts.get(i));
-            }
-        }
-    }
+
 }
